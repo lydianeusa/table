@@ -136,7 +136,9 @@ function tableauTotal(tab1, tab2) {
     }
 
     for (let index = 0; index < tab2.length; index++) {
-        totalArray.push(tab2[index])
+        if (!totalArray.includes(tab2[i])) {
+            totalArray.push(tab2[index]) 
+        }
     }
 
     return totalArray;
@@ -148,11 +150,12 @@ console.log(result2)
 
 function phraseComplete(arr1, arr2){
     let totalArray = tableauTotal(arr1, arr2);
-// for (let index = 0; index < arr1.length; index++) {
-//     totalArray.push(arr1[index]);
-// }
-// for (let index = 0; index < arr2.length; index++) {
-//     totalArray.push(arr2[index]);
+for (let index = 0; index < arr1.length; index++) {
+    totalArray.push(arr1[index]);
+}
+for (let index = 0; index < arr2.length; index++) {
+    totalArray.push(arr2[index]);
+
 let maPhrase ='Bienvenue tout le monde: '
 for(let index = 0; index < totalArray.length; index++){
     maPhrase += totalArray[index]
